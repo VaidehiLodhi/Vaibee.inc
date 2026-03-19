@@ -5,8 +5,9 @@ import { MessageMeBlock } from "./message-me-block"
 
 export const FooterBlock =()=> {
     return (
-        <div className="grid grid-cols-2 min-h-screen bg-[#FAB5C5]">
-            <div className="col-start-1 flex items-center justify-center gap-x-20 relative">
+        <div className="grid grid-cols-2 w-full min-h-screen bg-[#FAB5C5] pt-10">
+           {/* hide on mobile */}
+            <div className="hidden md:flex col-start-1 items-center justify-center gap-x-20 relative">
                 <div className="-translate-y-20 rotate-[-13.55deg]">
                     <GuestCheck/>
                 </div>
@@ -14,10 +15,13 @@ export const FooterBlock =()=> {
                     <BookmarkStack/>
                 </div>
             </div>
-            <div className="col-start-2">
+
+            {/* full width on mobile, col-2 on desktop */}
+            <div className="col-start-1 col-span-2 md:col-start-2">
                 <MessageMeBlock/>
             </div>
-            <div className="col-start-1 col-span-2">
+
+            <div className="hidden md:block col-start-1 col-span-2">
                 <TextMarquee outline={true} bgColor="#FAB5C5" />
             </div>
         </div>

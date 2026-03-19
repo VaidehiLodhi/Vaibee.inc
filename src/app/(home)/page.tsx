@@ -193,7 +193,7 @@ export default function Home() {
           </div>
 
           {/* DIARY */}
-          <div ref={diaryRef} onClick={handleToggle} className="absolute top-30 right-0 cursor-pointer z-50">
+          <div ref={diaryRef} onClick={handleToggle} className="absolute top-30 -right-4 cursor-pointer z-50">
             <div ref={cattoRef} className="absolute top-10 left-4 -z-10" style={{ transform: "translateY(100px)" }}>
               <CattoFigurine />
             </div>

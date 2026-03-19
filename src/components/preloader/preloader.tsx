@@ -61,13 +61,13 @@ export default function Preloader(): JSX.Element | null {
 
     return (
         <div
-            className={`fixed inset-0 w-screen h-screen z-300 flex items-center justify-center bg-[#F5E1CD] transition-all duration-700 ease-in-out
+            className={`fixed inset-0 min-w-screen h-screen z-500 flex items-center justify-center bg-[#F5E1CD] transition-all duration-700 ease-in-out
                 ${isLeaving ? "translate-y-full" : "translate-y-0"}
             `}
         >
             <div className={`flex flex-col items-center justify-center ${fadeIn ? "opacity-100" : "opacity-0"} transition-opacity duration-200 ease-in opacity `}>
                 <div className={`relative`}>
-                    <p className={`${bringbold.className} z-10 text-6xl text-[#2B0C7D] relative `}>
+                    <p className={`${bringbold.className} z-10 text-[40px] md:text-6xl text-[#2B0C7D] relative `}>
                         This is Vaibee.inc
                     </p>
                     <Image
@@ -75,7 +75,7 @@ export default function Preloader(): JSX.Element | null {
                         alt="doodles"
                         height={300}
                         width={300}
-                        className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2"
+                        className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[175px] md:w-[300px]"
                     />
                 </div>
                 <Image
@@ -83,7 +83,7 @@ export default function Preloader(): JSX.Element | null {
                     alt="vaibee_loader"
                     height={619}
                     width={370}
-                    className="z-10"
+                    className="z-10 w-[300px] md:w-[370px]"
                 />
             </div>
         </div>

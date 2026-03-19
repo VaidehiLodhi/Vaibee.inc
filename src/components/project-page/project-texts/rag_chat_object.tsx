@@ -10,6 +10,7 @@ export const ragChatInterface: blockType[] = [
     activeState: "#F8EAFF",
     fontActiveState: "#2B0C7D",
     overview: "/ragChat",
+    mobileOverview: "/mobile/ragChat",
     githublnk: "https://github.com/VaidehiLodhi/alibi_legal_assist"
   },
   {

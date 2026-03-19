@@ -15,7 +15,9 @@ export type metadataBlockType = {
   activeState: string;
   fontActiveState: string;
   overview: string;
+  mobileOverview: string;
   githublnk: string;
+  deployedlnk?: string;
 };
 
 export type contentBlockType =

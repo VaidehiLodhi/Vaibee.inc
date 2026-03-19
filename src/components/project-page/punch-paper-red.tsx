@@ -18,6 +18,7 @@ import { transformerObject } from "./project-texts/transformer_object";
 import { vaibeeIncObject } from "./project-texts/vaibee_object";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { GithubMulticolorIcon } from "./github-multicolor";
+import { LinkIcon } from "lucide-react";
 
 interface PunchPaperRedProps {
   className?: string;
@@ -178,6 +179,28 @@ export const PunchPaperRed = React.forwardRef<
                           size={22}
                         />
                       </Link>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          {(projectContentMap[project.id][0] as metadataBlockType).deployedlnk && (
+                            <Link
+                              href={`${(projectContentMap[project.id][0] as metadataBlockType).deployedlnk}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <LinkIcon 
+                                style={{ color: `${project.fontActiveState}` }}
+                                size={30} 
+                              />
+                            </Link>
+                          )}
+                        </TooltipTrigger>
+                        <TooltipContent
+                          arrowClassName="bg-transparent fill-transparent"
+                          style={{ backgroundColor: project.fontActiveState }}
+                        >
+                          <p>{`Deployed here <3`}</p>
+                        </TooltipContent>
+                      </Tooltip>
                     </div>
                   </CardHeader>
                   <CardContent className="px-3 py-2">
