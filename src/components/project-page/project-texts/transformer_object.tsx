@@ -10,6 +10,7 @@ export const transformerObject: blockType[] = [
     activeState: "#ECFDF8",
     fontActiveState: "#00CD95",
     overview: "/arch",
+    mobileOverview: "/mobile/transformer",
     githublnk: "https://github.com/VaidehiLodhi/Transformer_generation",
   },
   {

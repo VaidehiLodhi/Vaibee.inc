@@ -9,7 +9,9 @@ export const vaibeeIncObject: blockType[] = [
     activeState: "#FFF1F1",
     fontActiveState: "#FF6464",
     overview: "/vaibee.inc",
+    mobileOverview: "/mobile/vaibee",
     githublnk: "https://github.com/VaidehiLodhi/Vaibee.inc",
+    deployedlnk: "https://vaibeeinc.vercel.app/",
   },
   {
     title: "What is it?",

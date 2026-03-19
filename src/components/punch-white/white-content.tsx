@@ -97,7 +97,7 @@ export const WhiteContent = () => {
     <div className={`${magnat_test_light.className} w-full max-h-full flex flex-col`}>
 
       {/* Skillsets heading */}
-      <div className="mt-4 md:mt-10 flex flex-col">
+      <div className="hidden mt-4  md:mt-10 md:flex md:flex-col">
         <div className="flex items-center pl-3 md:pl-5 pb-2 justify-start text-sm md:text-[28px]">
           Skillsets
         </div>

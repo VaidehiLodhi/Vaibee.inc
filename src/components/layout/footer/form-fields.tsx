@@ -105,10 +105,10 @@ export const FormFields = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${magnat_text_regular.variable} w-full pl-20 pt-7`}
+      className={`${magnat_text_regular.variable} w-full flex flex-col items-center justify-center md:pl-20 pt-7`}
     >
-      <FieldGroup className="gap-0">
-        <Field className="gap-0 w-90">
+      <FieldGroup className="gap-0 flex flex-col items-center justify-center">
+        <Field className="gap-0 w-65 md:w-90">
           <InputFooter
             ref={nameRef}
             onKeyDown={(e) => handleKeyDown(e, emailRef)}
@@ -120,7 +120,7 @@ export const FormFields = () => {
             }
             aria-invalid={!!errors.name}
             onBlur={() => handleBlur("name")}
-            className={`w-full rounded-[10px] ${magnat_text_regular.className} text-[16px] focus:outline-none focus:border-[2.5px] focus:border-[#DF4346] transition-all duration-200`}
+            className={`w-full rounded-[10px] ${magnat_text_regular.className} text-[14px] md:text-[16px] focus:outline-none focus:border-[2.5px] focus:border-[#DF4346] transition-all duration-200`}
           />
           <div className="h-5.5">
             {errors.name && (
@@ -128,7 +128,7 @@ export const FormFields = () => {
             )}
           </div>
         </Field>
-        <Field className="gap-0 w-90">
+        <Field className="gap-0 w-65 md:w-90">
           <InputFooter
             ref={emailRef}
             onKeyDown={(e) => handleKeyDown(e, messageRef)}
@@ -141,7 +141,7 @@ export const FormFields = () => {
             }
             aria-invalid={!!errors.email}
             onBlur={() => handleBlur("email")}
-            className={`w-full rounded-[10px] ${magnat_text_regular.className} text-[16px] placeholder:text-[#DF4346] focus:outline-none focus:border-[2.5px] focus:border-[#DF4346] transition-all duration-200`}
+            className={`w-full rounded-[10px] ${magnat_text_regular.className} text-[14px] md:text-[16px] placeholder:text-[#DF4346] focus:outline-none focus:border-[2.5px] focus:border-[#DF4346] transition-all duration-200`}
           />
           <div className="h-5.5">
             {errors.email && (
@@ -149,7 +149,7 @@ export const FormFields = () => {
             )}
           </div>
         </Field>
-        <Field className="gap-0 w-90">
+        <Field className="gap-0 w-65 md:w-90">
           <TextareaFooter
             ref={messageRef}
             id="fieldgroup-message"
@@ -168,7 +168,7 @@ export const FormFields = () => {
         type="submit"
         variant="footer"
         disabled={submitStatus === "loading"}
-        className={`${departure_mono.className} bg-[#DF4346] text-[#FAB5C5] text-[14px] mt-4 w-90`}
+        className={`${departure_mono.className} bg-[#DF4346] text-[#FAB5C5] text-[14px] mt-4 w-65 md:w-90`}
       >
         {submitStatus === "loading" ? "sending" : "Drop it in <3"}
       </Button>

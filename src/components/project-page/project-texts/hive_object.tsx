@@ -9,7 +9,9 @@ export const hiveObject: blockType[] = [
     activeState: "#F5F4C7",
     fontActiveState: "#FAC206",
     overview: "/hive",
+    mobileOverview: "/mobile/hive",
     githublnk: "https://github.com/VaidehiLodhi/Hive",
+    deployedlnk: "https://hive-together.vercel.app",
   },
   {
     title: "What is it?",
