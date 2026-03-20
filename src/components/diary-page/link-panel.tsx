@@ -122,7 +122,7 @@ export const LinkPanel = () => {
             <div key={object.id} className="flex items-center gap-10">
               {/* Icon section */}
               {isFirstItem ? (
-                <div className="relative inline-block  w-10 h-10 translate-x-3">
+                <a href={`mailto:${object.value}`} className="relative inline-block  w-10 h-10 translate-x-3">
                   <Image
                     ref={mailRef}
                     src={object.imgeffectlnk}
@@ -137,9 +137,9 @@ export const LinkPanel = () => {
                     width={30}
                     className="absolute top-1.5 left-1.25 z-10"
                   />
-                </div>
+                </a>
               ) : (
-                <div className="flex gap-0.5">
+                <a href={object.value} target="_blank" rel="noopener noreferrer" className="flex gap-0.5">
                   {/* Left decoration */}
                   <div
                     ref={(el) => {
@@ -192,7 +192,7 @@ export const LinkPanel = () => {
                       width={15}
                     />
                   </div>
-                </div>
+                </a>
               )}
               {/* Name */}
               <div

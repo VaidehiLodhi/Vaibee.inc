@@ -201,7 +201,7 @@ export default function TimelinePageVaibee() {
           left: 0,
         }}
       >
-        <div className="panel min-w-screen h-screen shrink-0 bg-[#F5E1CD] flex items-center justify-center gap-x-20 px-40 ml-70">
+        <div className="panel min-w-screen h-screen shrink-0 bg-[#F5E1CD] flex items-center justify-center gap-x-20 px-20 ml-70">
           <div className="flex flex-col items-start justify-center gap-y-2">
             <p className="text-[14px] uppercase">[OVERVIEW]</p>
             <div

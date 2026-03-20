@@ -25,10 +25,10 @@ export const DiaryPage = () => {
         className={`${belmonte.className} p-8 grid grid-cols-4 h-full overflow-hidden`}
       >
         <div className="col-span-2 flex flex-col min-h-0 px-2 md:px-4 h-full">
-          <p className="text-sm md:text-3xl pt-4 md:pt-10 pl-2 md:pl-6 pb-2 md:pb-5">
+          <p className="z-2 text-sm md:text-3xl pt-4 md:pt-10 pl-2 md:pl-6 pb-2 md:pb-5">
             Hello!
           </p>
-          <div className="flex flex-col gap-3 min-h-0">
+          <div className="z-2 flex flex-col gap-3 min-h-0">
             <p className="text-xs md:text-xl pl-2 md:pl-4">
               My name is Vaidehi Lodhi, and I am a developer.
             </p>
@@ -51,7 +51,7 @@ export const DiaryPage = () => {
             alt="cat with wool ofc"
             height={292}
             width={387}
-            className="absolute left-0 bottom-0 max-w-full h-auto pl-2 py-3"
+            className="z-0 absolute left-0 bottom-0 max-w-full h-auto pl-2 py-3"
           />
         </div>
         <div className="col-span-2 flex flex-col min-h-0 h-full">

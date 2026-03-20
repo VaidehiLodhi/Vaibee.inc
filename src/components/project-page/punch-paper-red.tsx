@@ -294,7 +294,7 @@ export const PunchPaperRed = React.forwardRef<
                             >
                               <LinkIcon 
                                 style={{ color: `${project.fontActiveState}` }}
-                                size={30} 
+                                size={22} 
                               />
                             </Link>
                           )}
