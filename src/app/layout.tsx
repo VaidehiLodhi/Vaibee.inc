@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <head>
         <link rel="preload" as="image" href="/preloader/blue_doodle.png" />
         <link rel="preload" as="image" href="/preloader/green_doodle.png" />

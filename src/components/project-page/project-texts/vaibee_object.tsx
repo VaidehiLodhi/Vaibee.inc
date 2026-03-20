@@ -12,6 +12,10 @@ export const vaibeeIncObject: blockType[] = [
     mobileOverview: "/mobile/vaibee",
     githublnk: "https://github.com/VaidehiLodhi/Vaibee.inc",
     deployedlnk: "https://vaibeeinc.vercel.app/",
+    source_base: "/imgs/mockups/demo_mockups/vaibee_demo/vaibee_demo_base.png",
+    alt_base: "vaibee_base",
+    source_overlay: "/imgs/mockups/demo_mockups/vaibee_demo/vaibee_demo_carousel.png",
+    alt_overlay: "vaibee_overlay",
   },
   {
     title: "What is it?",

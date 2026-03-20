@@ -399,7 +399,7 @@ export default function TimelinePageTransformer() {
       {/* Back button - fixed to right edge */}
       <button
         onClick={() => router.push("/")}
-        className={`${bringbold.className} fixed top-0 right-0 z-[300] h-screen w-5 p-2 bg-[#DF4346] text-[#FFFFFF] text-[20px] tracking-widest opacity-20 hover:opacity-100 transition-opacity duration-200 cursor-pointer flex items-center justify-center`}
+        className={`${bringbold.className} fixed top-0 right-0 z-[300] h-screen w-10 p-2 bg-[#DF4346] text-[#FFFFFF] text-[20px] tracking-widest opacity-20 hover:opacity-100 transition-opacity duration-200 cursor-pointer flex items-center justify-center`}
         style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
       >
         [BACK]

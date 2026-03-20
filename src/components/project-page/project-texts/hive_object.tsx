@@ -12,6 +12,10 @@ export const hiveObject: blockType[] = [
     mobileOverview: "/mobile/hive",
     githublnk: "https://github.com/VaidehiLodhi/Hive",
     deployedlnk: "https://hive-together.vercel.app",
+    source_base: "/imgs/mockups/demo_mockups/hive_demo/hive_demo_base.png",
+    alt_base: "hive_base",
+    source_overlay: "/imgs/mockups/demo_mockups/hive_demo/hive_demo_carousel.png",
+    alt_overlay: "hive_overlay",
   },
   {
     title: "What is it?",

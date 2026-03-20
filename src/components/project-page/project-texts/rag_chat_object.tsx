@@ -11,7 +11,11 @@ export const ragChatInterface: blockType[] = [
     fontActiveState: "#2B0C7D",
     overview: "/ragChat",
     mobileOverview: "/mobile/ragChat",
-    githublnk: "https://github.com/VaidehiLodhi/alibi_legal_assist"
+    githublnk: "https://github.com/VaidehiLodhi/alibi_legal_assist",
+    source_base: "/imgs/mockups/demo_mockups/rag_demo/rag_demo_base.png",
+    alt_base: "rag_base",
+    source_overlay: "/imgs/mockups/demo_mockups/rag_demo/rag_demo_carousel.png",
+    alt_overlay: "rag_overlay",
   },
   {
     title: "What is it?",

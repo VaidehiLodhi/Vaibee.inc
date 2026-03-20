@@ -1,4 +1,5 @@
 import { MobileHamburger } from "@/components/layout/mobile-hamburger";
+import { ScrollBg } from "@/components/layout/scroll-bg";
 import { SkillsetMobile } from "@/components/overviews/mobile/skillset-mobile";
 import { magnat_test_regular } from "@/components/punch-white/white-content";
 
@@ -8,7 +9,8 @@ export const metadata = {
 
 const SkillPage =()=> {
     return (
-        <div className="relative w-screen min-h-screen bg-[#DF4346] overflow-x-hidden">
+        <div className="relative w-screen min-h-screen bg-transparent overflow-x-hidden">
+            <ScrollBg/>
             <div className="flex w-full items-center justify-between py-5">
                 <MobileHamburger color="#f8f8f8"/>
             </div>

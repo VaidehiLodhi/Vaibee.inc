@@ -145,7 +145,7 @@ export default function Home() {
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-10 font-sans">
+    <div className="min-h-screen overflow-x-clip flex items-center justify-center px-10 font-sans">
       {isMobile ? (
         <div className="flex flex-col w-full px-4 py-10 gap-y-8">
           <div className="w-screen relative z-10"><DiaryPage /></div>
