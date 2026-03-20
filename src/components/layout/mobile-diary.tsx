@@ -17,7 +17,7 @@ export const MobileDiary =()=> {
                 height={881}
                 className="relative w-full"
             />
-            <div className="flex flex-col item-center justify-center gap-y-20 absolute top-0 left-0 translate-x-20 translate-y-22">
+            <div className="flex flex-col item-center justify-center gap-y-20 absolute top-0 left-0 translate-x-15 translate-y-22">
                 <p>
                     My name is Vaidehi Lodhi, <br/>
                     and I am a developer. <br/>

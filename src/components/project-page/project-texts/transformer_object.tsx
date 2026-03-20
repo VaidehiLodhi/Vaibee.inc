@@ -12,6 +12,10 @@ export const transformerObject: blockType[] = [
     overview: "/arch",
     mobileOverview: "/mobile/transformer",
     githublnk: "https://github.com/VaidehiLodhi/Transformer_generation",
+    source_base: "/imgs/mockups/demo_mockups/transformer_demo/transformer_demo_base.png",
+    alt_base: "transformer_base",
+    source_overlay: "/imgs/mockups/demo_mockups/transformer_demo/transformer_demo_carousel.png",
+    alt_overlay: "transformer_overlay",
   },
   {
     title: "What is it?",

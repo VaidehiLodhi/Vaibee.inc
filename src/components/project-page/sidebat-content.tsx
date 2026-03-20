@@ -18,6 +18,10 @@ export type metadataBlockType = {
   mobileOverview: string;
   githublnk: string;
   deployedlnk?: string;
+  source_base: string;
+  alt_base: string;
+  source_overlay: string;
+  alt_overlay: string;
 };
 
 export type contentBlockType =

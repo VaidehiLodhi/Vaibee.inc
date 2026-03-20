@@ -19,6 +19,7 @@ import { vaibeeIncObject } from "./project-texts/vaibee_object";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { GithubMulticolorIcon } from "./github-multicolor";
 import { LinkIcon } from "lucide-react";
+import { CarouselContainer } from "./carousel-container";
 
 interface PunchPaperRedProps {
   className?: string;
@@ -146,21 +147,15 @@ export const PunchPaperRed = React.forwardRef<
                     <div className="flex items-center gap-x-3 px-3 pt-1">
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Button
-                            size="sm"
-                            className={`${magnat_text_regular.className} w-fit text-xs h-7`}
-                            style={{
-                              backgroundColor: project.fontActiveState,
-                              color: project.activeState,
-                            }}
-                            asChild
-                          >
-                            <Link
+                          <div className="w-[252px] h-[168px]">
+                            <CarouselContainer
+                              source_base={`${(projectContentMap[project.id][0] as metadataBlockType).source_base}`}
+                              source_overlay={`${(projectContentMap[project.id][0] as metadataBlockType).source_overlay}`}
+                              alt_base={`${(projectContentMap[project.id][0] as metadataBlockType).alt_base}`}
+                              alt_overlay={`${(projectContentMap[project.id][0] as metadataBlockType).alt_overlay}`}
                               href={`${(projectContentMap[project.id][0] as metadataBlockType).overview}`}
-                            >
-                              Showcase
-                            </Link>
-                          </Button>
+                            />
+                          </div>
                         </TooltipTrigger>
                         <TooltipContent
                           arrowClassName="bg-transparent fill-transparent"
@@ -259,45 +254,59 @@ export const PunchPaperRed = React.forwardRef<
                         title={project.title}
                         textColor={project.fontActiveState}
                       />
-                      <div className="flex items-center justify-start gap-x-4">
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <Button
-                              size="sm"
-                              className={`${magnat_text_regular.className} w-fit ml-7`}
-                              style={{
-                                backgroundColor: project.fontActiveState,
-                                color: project.activeState,
-                              }}
-                              asChild
-                            >
-                              <Link
-                                href={`${(projectContentMap[project.id][0] as metadataBlockType).overview}`}
-                              >
-                                Project showcase
-                              </Link>
-                            </Button>
-                          </TooltipTrigger>
-                          <TooltipContent
-                            arrowClassName="bg-transparent fill-transparent"
-                            style={{ backgroundColor: project.fontActiveState }}
-                          >
-                            <p>
-                              All images & video demo in here, check it out!
-                            </p>
-                          </TooltipContent>
-                        </Tooltip>
-                        <Link
-                          href={`${(projectContentMap[project.id][0] as metadataBlockType).githublnk}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      <div className="flex items-end justify-start gap-x-3 px-3 pt-1">
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <div className="w-[252px] h-[168px]">
+                            <CarouselContainer
+                                source_base={(projectContentMap[project.id][0] as metadataBlockType).source_base}
+                                source_overlay={(projectContentMap[project.id][0] as metadataBlockType).source_overlay}
+                                alt_base={(projectContentMap[project.id][0] as metadataBlockType).alt_base}
+                                alt_overlay={(projectContentMap[project.id][0] as metadataBlockType).alt_overlay}
+                                href={(projectContentMap[project.id][0] as metadataBlockType).overview}
+                            />
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent
+                          arrowClassName="bg-transparent fill-transparent"
+                          style={{ backgroundColor: project.fontActiveState }}
                         >
-                          <GithubMulticolorIcon
-                            fill={project.fontActiveState}
-                            size={30}
-                          />
-                        </Link>
-                      </div>
+                          <p>All images & video demo in here!</p>
+                        </TooltipContent>
+                      </Tooltip>
+                      <Link
+                        href={`${(projectContentMap[project.id][0] as metadataBlockType).githublnk}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <GithubMulticolorIcon
+                          fill={project.fontActiveState}
+                          size={22}
+                        />
+                      </Link>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          {(projectContentMap[project.id][0] as metadataBlockType).deployedlnk && (
+                            <Link
+                              href={`${(projectContentMap[project.id][0] as metadataBlockType).deployedlnk}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <LinkIcon 
+                                style={{ color: `${project.fontActiveState}` }}
+                                size={30} 
+                              />
+                            </Link>
+                          )}
+                        </TooltipTrigger>
+                        <TooltipContent
+                          arrowClassName="bg-transparent fill-transparent"
+                          style={{ backgroundColor: project.fontActiveState }}
+                        >
+                          <p>{`Deployed here <3`}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </div>
                     </CardHeader>
                     <CardContent>
                       <div className="flex flex-col gap-8">
