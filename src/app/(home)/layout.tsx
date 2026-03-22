@@ -29,6 +29,26 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vaibee.inc",
   description: "Its my portfolio! hehe, a kaleidoscope of my thoughts n ramblings",
+  openGraph: {
+    title: "Vaibee.inc",
+    description: "Its my portfolio! hehe, a kaleidoscope of my thoughts n ramblings",
+    url: "https://vaibeeinc.vercel.app/",
+    siteName: "Vaibee.inc",
+    images: [
+      {
+        url: "https://vaibeeinc.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vaibee.inc",
+    description: "Its my portfolio! hehe, a kaleidoscope of my thoughts n ramblings",
+    images: ["https://vaibeeinc.vercel.app/og-image.png"],
+  },
 };
 
 export const source_code = Source_Code_Pro({
