@@ -13,6 +13,7 @@ import { FooterBlock } from "@/components/layout/footer/footer-block";
 import { Toaster } from "sonner";
 import { MobileHamburger } from "@/components/layout/mobile-hamburger";
 import { MobileDiary } from "@/components/layout/mobile-diary";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { SkillsetMobile } from "@/components/overviews/mobile/skillset-mobile";
 
 
@@ -133,6 +134,7 @@ export default function RootLayout({
           }}
           />
         </TooltipProvider>
+        <GoogleAnalytics gaId="G-F647779Z8J" />
       </body>
     </html>
   );
