@@ -69,7 +69,7 @@ export const LinkPanel = () => {
     {
       id: "mail",
       name: "Email",
-      value: "vaidehixoxo@gmail.com",
+      value: "vaidehilodh19@gmail.com",
       imglnk: "/imgs/logos/mail/mail-logo.svg",
       imgeffectlnk: "/imgs/logos/mail/stamp-borders.svg",
     },
@@ -199,14 +199,14 @@ export const LinkPanel = () => {
                 className={`w-16 md:w-32 flex-none text-xs md:text-base ${isFirstItem ? "pl-3 md:pl-5" : ""}`}
               >
                 {isFirstItem && (
-                  <div className="flex items-center justify-center gap-x-1">
-                    {object.value}
+                  <div className="flex items-center text-[14px] justify-center gap-x-2">
                     <button
-                      onClick={() => handleCopy("vaidehixoxo@gmail.com")}
+                      onClick={() => handleCopy("vaidehilodh19@gmail.com")}
                       className="text-[#332525]/60 hover:text-[#332525] transition-colors duration-200 cursor-pointer"
                     >
                       {copied ? <Check color="#332525" size={14} /> : <Copy color="#332525" size={14} />}
                     </button>
+                    {object.value}
                   </div>
                 )}
                 {!isFirstItem && object.value && (

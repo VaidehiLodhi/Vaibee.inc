@@ -9,6 +9,12 @@ export const belmonte = localFont({
   display: "swap",
 });
 
+export const providence = localFont({
+  src: "../../../public/fonts/providence-sans.ttf",
+  variable: "--font-providence_sans",
+  display: "swap",
+});
+
 export const DiaryPage = () => {
   return (
     <div
@@ -22,26 +28,25 @@ export const DiaryPage = () => {
       }}
     >
       <div
-        className={`${belmonte.className} p-8 grid grid-cols-4 h-full overflow-hidden`}
+        className={`${providence.className} p-8 grid grid-cols-4 h-full overflow-hidden`}
       >
         <div className="col-span-2 flex flex-col min-h-0 px-2 md:px-4 h-full">
-          <p className="z-2 text-sm md:text-3xl pt-4 md:pt-10 pl-2 md:pl-6 pb-2 md:pb-5">
+          <p className="z-2 text-sm md:text-2xl pt-2 md:pt-8 pl-2 md:pl-6 pb-2 md:pb-5">
             Hello!
           </p>
-          <div className="z-2 flex flex-col gap-3 min-h-0">
-            <p className="text-xs md:text-xl pl-2 md:pl-4">
+          <div className="z-2 flex flex-col gap-3 min-h-0 text-xs md:text-[18px] tracking-normal pl-2 md:pl-4">
+            <p>
               My name is Vaidehi Lodhi, and I am a developer.
             </p>
-            <p className="text-xs md:text-xl pl-2 md:pl-4">
+            <p>
               I love designing digital experiences that blend different tech and mediums.
               I saw how powerful design could be through cinema. How every design choice contributed to crafting an experience.
             </p>
-            <p className="text-xs md:text-xl pl-2 md:pl-4">
-              Then collaborating with peers, ML and AI opened up a new territory for me, which i love to tread.
-              Currently, focusing on going as deep into machine learning as I
+            <p>
+              Currently, focusing on going as deep into backend & systems as I
               can get.
             </p>
-            <p className="text-xs md:text-xl pl-2 md:pl-4">
+            <p>
               Trying to get it all into my brain before it succumbs to the
               rigidity of age hehe.
             </p>

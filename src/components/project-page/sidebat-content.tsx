@@ -1,9 +1,8 @@
 import localFont from "next/font/local";
-import { ImgScroll } from "./project-img-scroll/img-scroll";
 
-export const belmonte = localFont({
-  src: "../../../public/fonts/belmonte_ballpoint.otf",
-  variable: "--font-belmonte_ballpoint",
+export const providence_bold = localFont({
+  src: "../../../public/fonts/providence-bold.otf",
+  variable: "--font-providence_bold",
   display: "swap",
 });
 
@@ -64,7 +63,7 @@ export function SidebarCardContent({ blocks }: { blocks: blockType[] }) {
           <div key={i} className="flex flex-col">
             <h4
               style={{ color: textColor }}
-              className={`${belmonte.className} text-2xl pl-2 pt-5 pb-2.5`}
+              className={`${providence_bold.className} text-2xl pl-2 pt-5 pb-2.5`}
             >
               {block.title}
             </h4>

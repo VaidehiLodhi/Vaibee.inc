@@ -4,7 +4,7 @@ import { hiveObject } from "@/components/project-page/project-texts/hive_object"
 import { ragChatInterface } from "@/components/project-page/project-texts/rag_chat_object";
 import { transformerObject } from "@/components/project-page/project-texts/transformer_object";
 import { vaibeeIncObject } from "@/components/project-page/project-texts/vaibee_object";
-import { belmonte, blockType, metadataBlockType, SidebarCardContent } from "@/components/project-page/sidebat-content";
+import { blockType, metadataBlockType, providence_bold, SidebarCardContent } from "@/components/project-page/sidebat-content";
 import { SidebarTabsTrigger, Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import Image from "next/image"
 import { departure_mono } from "./vaibee-timeline-mobile";
@@ -105,10 +105,10 @@ const SwipeHoldButton = ({ href, color }: { href: string; color: string }) => {
         {/* arrow up icon */}
         <text x="30" y="35" textAnchor="middle" fontSize="16" fill={color}>↑</text>
       </svg>
-      <p className={`${belmonte.className} text-[16px] text-black/50`}>
+      <p className={`${providence_bold.className} text-[16px] text-black/50`}>
         swipe up & hold
       </p>
-      <p className={`${belmonte.className} text-[16px] text-black/70`}>
+      <p className={`${providence_bold.className} text-[16px] text-black/70`}>
         {`it'll take u the image caraousel (check it out <3)`}
       </p>
     </div>

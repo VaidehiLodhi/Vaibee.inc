@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import localFont from "next/font/local";
+import { providence } from "../diary-page/diary-page";
 
 export const belmonte = localFont({
   src: "../../../public/fonts/belmonte_ballpoint.otf",
@@ -179,7 +180,7 @@ export const SkillsetButton = ({
     >
       <div className="flex items-baseline gap-3 md:gap-7 px-3 py-2 md:py-3">
         <span
-          className={`${belmonte.className}  text-xl md:text-4xl leading-none`}
+          className={`${providence.className}  text-xl md:text-4xl leading-none`}
         >
           {index}
         </span>
@@ -193,7 +194,7 @@ export const SkillsetButton = ({
       {/* Hover text that appears */}
       <div
         ref={hoverTextContainerRef}
-        className={`${belmonte.className} absolute text-lg font-extralight text-black hidden md:block`}
+        className={`${providence.className} absolute text-lg font-extralight text-black hidden md:block`}
         style={{
           bottom: hoverTextPosition.bottom,
           right: hoverTextPosition.right,
@@ -201,7 +202,7 @@ export const SkillsetButton = ({
           left: hoverTextPosition.left,
         }}
       >
-        <div className="flex flex-col items-end justify-center leading-5 text-[20px]">
+        <div className="flex flex-col items-end justify-center leading-5 text-[18px]">
           <span
             ref={hoverText1Ref}
             className="inline-block"
