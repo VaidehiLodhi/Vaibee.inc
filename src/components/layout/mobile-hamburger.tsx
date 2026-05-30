@@ -32,8 +32,8 @@ const socials = [
 ];
 
 const links = [
-    { href: "/mobile/works", label: "Work", img: "/mobile/cracker_doodle.png", imgClass: "w-[50%] absolute left-1/2 top-1/2 translate-x-0 -translate-y-1/2" },
     { href: "/", label: "Profile", img: "/mobile/cracker_filled.png", imgClass: "w-[50%] absolute left-1/2 top-1/2 translate-x-0 -translate-y-20" },
+    { href: "/mobile/works", label: "Work", img: "/mobile/cracker_doodle.png", imgClass: "w-[50%] absolute left-1/2 top-1/2 translate-x-0 -translate-y-1/2" },
     { href: "/mobile/skill", label: "Skillset", img: "/mobile/cracker_doodle_2.png", imgClass: "w-[50%] absolute left-1/2 top-1/2 translate-x-0 -translate-y-1/2" },
 ];
 
@@ -127,9 +127,9 @@ export const MobileHamburger =({color,} : hamburgerProp)=> {
                     </div>
 
                     <div className="flex items-center justify-center gap-x-1 pt-2">
-                        {`vaidehixoxo@gmail.com`}
+                        {`vaidehilodh19@gmail.com`}
                         <button
-                            onClick={() => handleCopy("vaidehixoxo@gmail.com")}
+                            onClick={() => handleCopy("vaidehilodh19@gmail.com")}
                             className="text-[#332525]/60 hover:text-[#332525] transition-colors duration-200 cursor-pointer"
                         >
                             {copied ? <Check color="#332525" size={14} /> : <Copy color="#332525" size={14} />}

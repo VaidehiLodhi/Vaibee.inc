@@ -7,6 +7,7 @@ import { DiaryPage } from "@/components/diary-page/diary-page";
 import { CattoFigurine } from "@/components/diary-page/catto-figurine";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { StackNav, StackNavHandle } from "@/components/stacknav/stack-nav";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,12 @@ export default function Home() {
 
   const isMobile = useIsMobile();
   const [stack, setStack] = useState<cardId[]>(["red", "white"]);
+  const stackRef = useRef(stack);
+  const stackNavRef = useRef<StackNavHandle>(null);
+
+  useEffect(() => {
+    stackRef.current = stack;
+  }, [stack])
 
   const pageRefs = { red: redRef, white: whiteRef };
 
@@ -95,6 +102,8 @@ export default function Home() {
     if (isAnimating.current) return;
     if (stack[0] === cid) return;
     const nextStack = [cid, ...stack.filter((id) => id !== cid)];
+
+    stackNavRef.current?.swap(); // triggers stack nav component
     playStackAnimation(cid, nextStack);
   }
 
@@ -158,7 +167,7 @@ export default function Home() {
         </div>
       ) : (
         <div className="relative grid grid-cols-1 md:grid-cols-12 md:gap-x-20 md:px-20 w-full min-h-screen">
-          {/* RED LAYER */}
+          {/* RED LAYER / PROJECT PAGE*/}
           <div
             ref={pageRefs.red}
             className="col-start-1 md:col-span-8 md:col-start-4 row-start-1 relative min-h-screen pointer-events-none flex items-start justify-center"
@@ -175,7 +184,21 @@ export default function Home() {
             </div>
           </div>
 
-          {/* WHITE LAYER */}
+          {/* STACK NAV */}
+          <StackNav
+            ref={stackNavRef}
+            isOpen={isOpen}
+            onDiaryClick={handleToggle}
+            onStackChange={(top) => {
+              const cid: cardId = top === "projectPage" ? "red" : "white"
+              if (isAnimating.current) return;
+              if (stackRef.current[0] === cid) return;
+              const nextStack = [cid, ...stackRef.current.filter((id) => id != cid)];
+              playStackAnimation(cid, nextStack);
+            }}
+          />
+
+          {/* WHITE LAYER / SKILL SET PAGE */}
           <div
             ref={pageRefs.white}
             className="col-start-1 md:col-span-8 md:col-start-2 row-start-1 relative flex items-start justify-center min-h-screen pointer-events-none"

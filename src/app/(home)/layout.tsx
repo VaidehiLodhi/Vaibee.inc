@@ -14,7 +14,6 @@ import { Toaster } from "sonner";
 import { MobileHamburger } from "@/components/layout/mobile-hamburger";
 import { MobileDiary } from "@/components/layout/mobile-diary";
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { SkillsetMobile } from "@/components/overviews/mobile/skillset-mobile";
 
 
 const geistSans = Geist({
@@ -99,7 +98,7 @@ export default function RootLayout({
               ${didot.variable}
               ${housing.variable}
               ${magnat_text_regular.variable} antialiased`,
-          "bg-[#DF4346] overflow-x-hidden",
+          "bg-[#DF4346] overflow-x-hidden selection:bg-red-300/60 selection:text-[#332525]",
         )}
       >
         <Preloader/>

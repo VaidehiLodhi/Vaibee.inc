@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import Image from "next/image"
+import { providence } from "../diary-page/diary-page";
 
 export const belmonte = localFont({
   src: "../../../public/fonts/belmonte_ballpoint.otf",
@@ -9,7 +10,7 @@ export const belmonte = localFont({
 
 export const MobileDiary =()=> {
     return (
-        <div className={`${belmonte.className} relative w-full text-xl`}>
+        <div className={`${providence.className} relative w-full text-[16px]`}>
             <Image
                 src="/mobile/mobile_page.png"
                 alt="mobile page"
@@ -17,7 +18,7 @@ export const MobileDiary =()=> {
                 height={881}
                 className="relative w-full"
             />
-            <div className="flex flex-col item-center justify-center gap-y-20 absolute top-0 left-0 translate-x-15 translate-y-22">
+            <div className="flex flex-col item-center justify-center gap-y-28 absolute top-0 left-0 translate-x-10 translate-y-22">
                 <p>
                     My name is Vaidehi Lodhi, <br/>
                     and I am a developer. <br/>
@@ -31,11 +32,8 @@ export const MobileDiary =()=> {
                     experience.<br/>
                 </p>
                 <p>
-                    Then collaborating with peers, <br/>
-                    ML and AI opened up a new territory <br/>
-                    for me, which i love to tread.<br/>
                     Currently, focusing on going as deep <br/> 
-                    into deep learning as i can get. <br/>
+                    into backend & systems as i can get. <br/>
 
                     Trying to get it all into my <br/>
                     brain before it succumbs <br/>
