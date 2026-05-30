@@ -153,12 +153,13 @@ export const StackNav = forwardRef<StackNavHandle, StackNavProp> (({onStackChang
     gsap.set(projectRef.current,  { y: slotOf.current[0] });
     gsap.set(skillSetRef.current, { y: slotOf.current[1] });
     initDraggables();
+
   }, { scope: containerRef });
 
   return (
     <div
       ref={containerRef}
-      className="absolute left-0 ml-10 top-[100px] md:px-20 w-[560px]"
+      className="absolute left-0 ml-10 top-[130px] md:px-20 w-[560px]"
       style={{
         height: 610,
         translate: "none",
@@ -179,7 +180,7 @@ export const StackNav = forwardRef<StackNavHandle, StackNavProp> (({onStackChang
           zIndex: 3000,
         }}
       >
-        <div className="relative w-[100px] h-[150px] mt-5">
+        <div className="relative w-[100px] h-[150px] mt-5 cursor-pointer">
           <Image
             width={100} height={100}
             alt="/diaryPage"
